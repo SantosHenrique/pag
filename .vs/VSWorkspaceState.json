@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\.github",
+    "\\.github\\workflows",
+    "\\Dominio",
+    "\\Dominio\\Entidades",
+    "\\Dominio\\Interfaces",
+    "\\GerenciadorAulas",
+    "\\Infraestrutura"
+  ],
+  "PreviewInSolutionExplorer": false
+}

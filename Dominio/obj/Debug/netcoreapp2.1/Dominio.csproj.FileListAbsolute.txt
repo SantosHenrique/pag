@@ -1,0 +1,4 @@
+C:\Users\ferna\source\repos\GerenciadorAulas\Dominio\obj\Debug\netcoreapp2.1\Dominio.csprojAssemblyReference.cache
+C:\Users\ferna\source\repos\GerenciadorAulas\Dominio\obj\Debug\netcoreapp2.1\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\ferna\source\repos\GerenciadorAulas\Dominio\obj\Debug\netcoreapp2.1\Dominio.AssemblyInfoInputs.cache
+C:\Users\ferna\source\repos\GerenciadorAulas\Dominio\obj\Debug\netcoreapp2.1\Dominio.AssemblyInfo.cs

@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.960
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "core", "core", "{F1F3942F-844A-416F-9CBB-D5E06C9FA34D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominio", "..\Dominio\Dominio.csproj", "{DCC32066-2881-443E-8975-FBF11E2887B6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DCC32066-2881-443E-8975-FBF11E2887B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCC32066-2881-443E-8975-FBF11E2887B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCC32066-2881-443E-8975-FBF11E2887B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCC32066-2881-443E-8975-FBF11E2887B6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DCC32066-2881-443E-8975-FBF11E2887B6} = {F1F3942F-844A-416F-9CBB-D5E06C9FA34D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4967AD83-D249-4A91-9A6D-3CF5EDBD9A9E}
+	EndGlobalSection
+EndGlobal
