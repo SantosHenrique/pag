@@ -1,0 +1,11 @@
+C:\Users\ferna\source\repos\GerenciadorAulas\GerenciadorAulas\Infra\bin\Debug\netstandard2.0\Infra.deps.json
+C:\Users\ferna\source\repos\GerenciadorAulas\GerenciadorAulas\Infra\bin\Debug\netstandard2.0\Infra.dll
+C:\Users\ferna\source\repos\GerenciadorAulas\GerenciadorAulas\Infra\bin\Debug\netstandard2.0\Infra.pdb
+C:\Users\ferna\source\repos\GerenciadorAulas\GerenciadorAulas\Infra\obj\Debug\netstandard2.0\Infra.csprojAssemblyReference.cache
+C:\Users\ferna\source\repos\GerenciadorAulas\GerenciadorAulas\Infra\obj\Debug\netstandard2.0\Infra.AssemblyInfoInputs.cache
+C:\Users\ferna\source\repos\GerenciadorAulas\GerenciadorAulas\Infra\obj\Debug\netstandard2.0\Infra.AssemblyInfo.cs
+C:\Users\ferna\source\repos\GerenciadorAulas\GerenciadorAulas\Infra\obj\Debug\netstandard2.0\Infra.dll
+C:\Users\ferna\source\repos\GerenciadorAulas\GerenciadorAulas\Infra\obj\Debug\netstandard2.0\Infra.pdb
+C:\Users\ferna\source\repos\GerenciadorAulas\GerenciadorAulas\Infra\bin\Debug\netstandard2.0\Dominio.dll
+C:\Users\ferna\source\repos\GerenciadorAulas\GerenciadorAulas\Infra\bin\Debug\netstandard2.0\Dominio.pdb
+C:\Users\ferna\source\repos\GerenciadorAulas\GerenciadorAulas\Infra\obj\Debug\netstandard2.0\Infra.csproj.CopyComplete

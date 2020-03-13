@@ -1,4 +1,8 @@
+C:\Users\ferna\source\repos\GerenciadorAulas\Dominio\bin\Debug\netcoreapp2.1\Dominio.deps.json
+C:\Users\ferna\source\repos\GerenciadorAulas\Dominio\bin\Debug\netcoreapp2.1\Dominio.dll
+C:\Users\ferna\source\repos\GerenciadorAulas\Dominio\bin\Debug\netcoreapp2.1\Dominio.pdb
 C:\Users\ferna\source\repos\GerenciadorAulas\Dominio\obj\Debug\netcoreapp2.1\Dominio.csprojAssemblyReference.cache
-C:\Users\ferna\source\repos\GerenciadorAulas\Dominio\obj\Debug\netcoreapp2.1\Dominio.csproj.CoreCompileInputs.cache
 C:\Users\ferna\source\repos\GerenciadorAulas\Dominio\obj\Debug\netcoreapp2.1\Dominio.AssemblyInfoInputs.cache
 C:\Users\ferna\source\repos\GerenciadorAulas\Dominio\obj\Debug\netcoreapp2.1\Dominio.AssemblyInfo.cs
+C:\Users\ferna\source\repos\GerenciadorAulas\Dominio\obj\Debug\netcoreapp2.1\Dominio.dll
+C:\Users\ferna\source\repos\GerenciadorAulas\Dominio\obj\Debug\netcoreapp2.1\Dominio.pdb
