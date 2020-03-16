@@ -14,7 +14,8 @@ namespace Infraestrutura.Interfaces.Respositories.Domain.EFCore
             Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null,
             params string[] includeProperties);
 
-        protected abstract IEnumerable<TEntity> GetYeldManipulated(IEnumerable<TEntity> entities, Func<TEntity, TEntity> DoAction);
+        protected abstract IEnumerable<TEntity> GetYieldManipulated(IEnumerable<TEntity> entities, Func<TEntity, TEntity> DoAction);
+
         #endregion ProtectedMethods
     }
 }

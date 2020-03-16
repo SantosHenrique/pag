@@ -1,19 +1,18 @@
-﻿using Dominio.Interfaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Infraestrutura.Interfaces.Respositories.Standard
+namespace Application.Interfaces.Services.Standard
 {
-    public interface IRepositoryAsync<TEntity> : IDisposable where TEntity : class, IEntidadeIdentidade
+    public interface IServiceBase<TEntity> where TEntity : class
     {
         Task<TEntity> AddAsync(TEntity obj);
         Task<int> AddRangeAsync(IEnumerable<TEntity> entities);
         Task<TEntity> GetByIdAsync(object id);
         Task<IEnumerable<TEntity>> GetAllAsync();
         Task<int> UpdateAsync(TEntity obj);
-        Task<int> UpdateRangeAsync(IEnumerable<TEntity> entities);
+        Task<IEnumerable<TEntity>> UpdateRangeAsync(IEnumerable<TEntity> entities);
         Task<bool> RemoveAsync(object id);
         Task<int> RemoveAsyncRange(IEnumerable<TEntity> entities);
     }

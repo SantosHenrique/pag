@@ -4,6 +4,8 @@ using Infraestrutura.Interfaces.Respositories.Standard;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -26,25 +28,25 @@ namespace Infra.Repositories.Standard.EFCore
             GC.SuppressFinalize(this);
         }
 
-        public async Task<TEntity> AddAsync(TEntity obj)
+        public virtual async Task<TEntity> AddAsync(TEntity obj)
         {
             var response = await dbSet.AddAsync(obj);
             await dbContext.SaveChangesAsync();
             return response.Entity;
         }
 
-        public async Task<int> AddRangeAsync(IEnumerable<TEntity> entities)
+        public virtual async Task<int> AddRangeAsync(IEnumerable<TEntity> entities)
         {
             await dbSet.AddRangeAsync(entities);
             return await dbContext.SaveChangesAsync();
         }
 
-        public async Task<TEntity> GetByIdAsync(object id)
+        public virtual async Task<TEntity> GetByIdAsync(object id)
         {
             return await dbSet.FindAsync(id);
         }
 
-        public async Task<IEnumerable<TEntity>> GetAllAsync() => await Task.FromResult(dbSet);
+        public virtual async Task<IEnumerable<TEntity>> GetAllAsync() => await Task.FromResult(dbSet);
 
         public async Task<int> UpdateAsync(TEntity obj)
         {
@@ -52,13 +54,13 @@ namespace Infra.Repositories.Standard.EFCore
             return await dbContext.SaveChangesAsync();
         }
 
-        public async Task<int> UpdateRangeAsync(IEnumerable<TEntity> entities)
+        public virtual async Task<int> UpdateRangeAsync(IEnumerable<TEntity> entities)
         {
             dbSet.UpdateRange();
             return await dbContext.SaveChangesAsync();
         }
 
-        public async Task<bool> RemoveAsync(object id)
+        public virtual async Task<bool> RemoveAsync(object id)
         {
             TEntity entity = await GetByIdAsync(id);
             if (entity == null) return false;
@@ -66,11 +68,49 @@ namespace Infra.Repositories.Standard.EFCore
             return await dbContext.SaveChangesAsync() > 0 ? true : false;
         }
 
-        public async Task<int> RemoveRangeAsync(IEnumerable<TEntity> entities)
+        public virtual async Task<int> RemoveAsyncRange(IEnumerable<TEntity> entities)
         {
             dbSet.RemoveRange(entities);
-            return await dbContext.SaveChangesAsync(); 
+            return await dbContext.SaveChangesAsync();
         }
 
+        #region ProtectedMethods
+        protected virtual override IQueryable<TEntity> GenerateQuery(Expression<Func<TEntity, bool>> filter = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null, params string[] includeProperties)
+        {
+            IQueryable<TEntity> query = dbSet;
+            query = GenerateQueryableWhereExpression(query, filter);
+            query = GenerateIncludeProperties(query, includeProperties);
+
+            if (orderBy != null)
+                return orderBy(query);
+
+            return query;
+        }
+
+        private IQueryable<TEntity> GenerateQueryableWhereExpression(IQueryable<TEntity> query,
+            Expression<Func<TEntity, bool>> filter)
+        {
+            if (filter != null)
+                return query.Where(filter);
+            return query;
+        }
+
+        private IQueryable<TEntity> GenerateIncludeProperties(IQueryable<TEntity> query, params string[] includeProperties)
+        {
+            foreach (string includeProperty in includeProperties)
+            {
+                query.Include(includeProperty);
+            }
+            return query;
+        }
+
+        protected virtual IEnumerable<TEntity> GetYieldManipulated(IEnumerable<TEntity> entities, Func<TEntity, TEntity> DoAction)
+        {
+            foreach(var e in entities)
+            {
+                yield return DoAction(e);
+            }
+        }
+        #endregion ProtectedMethods
     }
 }

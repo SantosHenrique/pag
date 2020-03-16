@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Application.Interfaces\Application.Interfaces.csproj" />
+    <ProjectReference Include="..\Infraestrutura.Interfaces\Infraestrutura.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>
